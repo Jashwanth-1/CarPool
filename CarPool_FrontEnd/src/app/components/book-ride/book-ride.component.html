@@ -1,0 +1,50 @@
+<div class="h-100 m-0 d-flex flex-column image">
+  <app-navbar class="navh"></app-navbar>
+  <div class="row m-0 p-0" [ngClass]="isFormSubmitted == true ? 'scroll' : ''">
+    <div class="col-lg-5 col-12">
+      <div class="card shadow">
+        <div class="card-title">
+          <div class="d-flex justify-content-between">
+            <div class="d-flex flex-column p-0 lh-1">
+              <p class="title fs-2 fw-bold">Book a Ride</p>
+              <p class="text-muted text-small">we get you the matches asap !</p>
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                (click)="openOfferRidePage()"
+                checked
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <app-ride> </app-ride>
+        </div>
+        <button
+          class="background-orange rounded-pill text-light fw-bold"
+          [disabled]="rideForm.invalid"
+          (click)="submitRide()"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+    <div class="d-flex flex-column right col-lg-7 col-12" *ngIf="!isBooked">
+      <p class="violet fs-2 fw-bold">Your Matches</p>
+      <div class="matching-cards p-0">
+        <app-ride-card class="m-3 grid" [rides]="matchingRides"></app-ride-card>
+        <div *ngIf="matchingRides.length < 1" class="violet fs-2 fw-bold">
+          No Rides Available !!
+        </div>
+      </div>
+    </div>
+    <div *ngIf="isBooked" class="d-flex flex-column right col-lg-7 col-12">
+      <div class="violet fs-2 fw-bold align-self-center pt-5">
+        Please submit a ride to get matches
+      </div>
+    </div>
+  </div>
+</div>

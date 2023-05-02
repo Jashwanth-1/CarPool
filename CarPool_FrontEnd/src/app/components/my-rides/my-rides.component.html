@@ -1,0 +1,14 @@
+<div class="h-100 m-0 d-flex flex-column image">
+  <app-navbar class="navh"></app-navbar>
+  <div class="row content">
+    <div class="col-xl-3 col-md-5 col-11 p-1">
+      <p class="title background-violet">Booked rides</p>
+      <app-ride-card class="grid" [rides]="bookedRides"></app-ride-card>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-xl-3 col-md-5 col-11 p-1">
+      <p class="title title-secondary background-orange">Offered rides</p>
+      <app-ride-card class="grid" [rides]="offeredRides"></app-ride-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.left-home {
+  padding-top: 2vh;
+  padding-left: 3vw;
+}
+.content {
+  font-size: 6vw;
+  padding-top: 8vh;
+  width: 80%;
+  height: 40%;
+}
+.head {
+  font-size: 7vw;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 100;
+}
+.image {
+  background-repeat: no-repeat;
+  background-image: url("../../../assets/img1.png");
+  background-position: bottom left;
+  background-size: 95% 47%;
+}
+.space {
+  letter-spacing: 0.4vw;
+}
+.right-home {
+  font-family: "Open Sans", sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+}

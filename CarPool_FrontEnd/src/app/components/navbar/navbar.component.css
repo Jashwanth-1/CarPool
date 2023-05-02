@@ -1,0 +1,41 @@
+.logo {
+  height: 8vh;
+}
+.nav {
+  box-sizing: border-box;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+.profile {
+  padding-top: 8%;
+  padding-right: 8vw;
+}
+.rounded-circle {
+  height: 2.6em;
+  width: 2.6em;
+  border-radius: 50% !important;
+  margin-left: 0.5vw;
+  margin-top: -1.5%;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.shadow {
+  text-align: center;
+}
+.drop-item:hover {
+  color: white !important;
+  background-color: rgba(118, 83, 252);
+  opacity: 1;
+}
+.drop-item {
+  font-weight: 500;
+  padding: 5%;
+  font-size: 1vw;
+}
+
+@media only screen and (max-width: 900px) {
+  .drop-item {
+    font-size: 3vw;
+  }
+}

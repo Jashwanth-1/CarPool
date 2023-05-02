@@ -1,0 +1,120 @@
+<div class="row row-no-gutters h-100 orange">
+  <p class="text-capitalize fs-2 fw-bold text-light text-center top">
+    S<span class="underline">ign </span>Up
+  </p>
+  <form
+    [formGroup]="signUpForm"
+    class="d-flex flex-column justify-content-between form-group"
+  >
+    <div class="form-floating form-group">
+      <input
+        placeholder="enter"
+        type="text"
+        id="name"
+        class="form-control"
+        #fullName
+        formControlName="fullName"
+      />
+      <label for="name" class="text-muted">Enter Full Name</label>
+      <div
+        *ngIf="
+          signUpForm.get('fullName')?.touched &&
+          signUpForm.get('fullName')?.invalid
+        "
+        class="text-light fs-6"
+      >
+        **Enter Full Name**
+      </div>
+    </div>
+
+    <div class="form-floating form-group mt-2">
+      <input
+        placeholder="emailId"
+        type="email"
+        id="emailId"
+        class="form-control"
+        [(ngModel)]="user.emailId"
+        formControlName="emailId"
+      />
+      <label for="emailId" class="text-muted">Enter Email Id</label>
+      <div
+        *ngIf="
+          signUpForm.get('emailId')?.touched &&
+          signUpForm.get('emailId')?.invalid
+        "
+        class="text-light fs-6"
+      >
+        **Enter a valid email**
+      </div>
+    </div>
+    <div class="form-floating form-group mt-2">
+      <input
+        placeholder="password"
+        [type]="isPasswordHidden ? 'password' : 'text'"
+        id="password"
+        class="form-control"
+        [(ngModel)]="user.password"
+        formControlName="password"
+      />
+      <label for="password" class="text-muted">Enter Password</label>
+      <i
+        class="fa-solid fa-eye text-muted"
+        [hidden]="isPasswordHidden"
+        (click)="showPassword()"
+      ></i>
+      <i
+        class="fa-solid fa-eye-slash text-muted"
+        [hidden]="!isPasswordHidden"
+        (click)="hidePassword()"
+      ></i>
+      <div
+        *ngIf="
+          signUpForm.get('password')?.touched &&
+          signUpForm.get('password')?.invalid
+        "
+        class="text-light fs-6"
+      >
+        **Enter a valid password**
+      </div>
+    </div>
+    <div class="form-floating mt-2">
+      <input
+        placeholder="email"
+        type="password"
+        id="confirm"
+        class="form-control"
+        #confirmPassword
+        formControlName="confirmPassword"
+      />
+      <label for="confirm" class="text-muted">Confirm Password</label>
+      <div
+        *ngIf="
+          signUpForm.get('confirmPassword')?.touched &&
+          signUpForm.get('confirmPassword')?.value !=
+            signUpForm.get('password')?.value
+        "
+        class="text-light fs-6"
+      >
+        **Passwords don't match**
+      </div>
+    </div>
+    <p class="submit text-center p-1 mt-2">
+      <button
+        class="ml rounded-pill violet text-light fw-bold"
+        (click)="submitForm()"
+        [disabled]="signUpForm.invalid"
+      >
+        Submit
+      </button>
+    </p>
+    <div class="text-light fs-6 ml text-center">
+      Already a member?
+      <a
+        class="fw-bold fs-6 text-uppercase text-light"
+        (click)="openLoginPage()"
+        ><span class="underline">log</span> In</a
+      >
+    </div>
+  </form>
+  <img src="../../../assets/imgg2_.png" alt="" class="image pt-3" />
+</div>

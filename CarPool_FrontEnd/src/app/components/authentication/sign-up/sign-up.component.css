@@ -1,0 +1,65 @@
+.top {
+  padding-top: 15%;
+  padding-bottom: 5%;
+  padding-left: 12%;
+}
+.justify-content-between {
+  height: 49%;
+  padding-left: 18%;
+}
+.image {
+  opacity: 0.3;
+  padding-top: 2%;
+  height: 29%;
+  padding: 0;
+}
+.flex {
+  padding-top: 20%;
+}
+.form-floating > .form-control:-webkit-autofill {
+  padding-top: 2.85rem;
+  padding-bottom: 1.3rem;
+}
+input {
+  width: 82%;
+  font-size: large;
+  border: none;
+}
+.text-center {
+  margin-left: -4%;
+}
+.ml {
+  margin-left: -10%;
+}
+button {
+  width: fit-content;
+  padding: 2.6% 10%;
+  border: none;
+}
+button:disabled {
+  background-color: gray;
+}
+a {
+  text-decoration: none;
+}
+.violet {
+  background-color: rgb(148, 28, 256);
+}
+.orange {
+  background-color: rgb(256, 172, 28);
+}
+
+i {
+  position: absolute;
+  left: 70%;
+  top: 40%;
+  opacity: 0.8;
+  font-size: large;
+}
+.left-text {
+  width: fit-content;
+}
+.modal {
+  width: 50%;
+  height: 50%;
+}

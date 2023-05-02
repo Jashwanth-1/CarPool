@@ -1,0 +1,80 @@
+<div class="row row-no-gutters h-100 background-violet">
+  <div class="text-capitalize fs-2 fw-bold text-light text-center top">
+    <p><span class="underline">Log I</span>n</p>
+  </div>
+  <form
+    [formGroup]="logInForm"
+    class="d-flex flex-column justify-content-between"
+  >
+    <div class="form-floating">
+      <input
+        placeholder="email"
+        type="email"
+        required
+        id="email"
+        class="form-control"
+        formControlName="emailId"
+        #emailId
+      />
+      <label for="email" class="text-muted">Enter Email Id</label>
+      <div
+        *ngIf="
+          logInForm.get('emailId')?.touched && logInForm.get('emailId')?.invalid
+        "
+        class="text-light fs-6"
+      >
+        **Enter a valid email**
+      </div>
+    </div>
+    <div class="form-floating d-flex">
+      <input
+        placeholder="email"
+        [type]="isPasswordHidden ? 'password' : 'text'"
+        required
+        id="password"
+        class="form-control"
+        formControlName="password"
+        #password
+      />
+      <label for="password" class="text-muted">Enter Password</label>
+      <i
+        class="fa-solid fa-eye text-muted"
+        [hidden]="isPasswordHidden"
+        (click)="showPassword()"
+      ></i>
+      <i
+        class="fa-solid fa-eye-slash text-muted"
+        [hidden]="!isPasswordHidden"
+        (click)="hidePassword()"
+      ></i>
+    </div>
+    <div
+      *ngIf="
+        logInForm.get('password')?.touched && logInForm.get('password')?.invalid
+      "
+      class="text-light fs-6"
+    >
+      <p>**Enter a valid password**</p>
+    </div>
+    <p class="submit text-center">
+      <button
+        class="ml rounded-pill background-orange text-light fw-bold"
+        (click)="submitForm()"
+        [disabled]="logInForm.invalid"
+      >
+        Submit
+      </button>
+    </p>
+
+    <div class="text-light fs-6 text-center ml">
+      Not a member yet ?
+      <a
+        class="fw-bold fs-6 text-uppercase text-light"
+        (click)="openSignUpPage()"
+      >
+        <span class="underline">sign u</span>p</a
+      >
+    </div>
+  </form>
+  <img src="../../../assets/imgg2_.png" alt="" class="image pt-3" />
+</div>

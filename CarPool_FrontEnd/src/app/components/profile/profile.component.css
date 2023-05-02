@@ -1,0 +1,43 @@
+.navh {
+  height: 20%;
+}
+.image {
+  background-image: url("../../../assets/img4.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.half {
+  width: 60%;
+}
+label {
+  padding: 3vh 0;
+}
+
+.secondary {
+  padding-left: 8vw;
+}
+.btn {
+  padding: 0 2vw;
+}
+input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+@media only screen and (max-width: 770px) {
+  .secondary {
+    padding-left: 4vw;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .primary {
+    padding-left: 4vw;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .btn {
+    padding: 0 4vw;
+  }
+}

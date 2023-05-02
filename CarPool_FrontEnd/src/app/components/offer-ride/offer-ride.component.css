@@ -1,0 +1,157 @@
+.navh {
+  height: 20%;
+}
+.card {
+  width: 23.7%;
+  margin-left: 2%;
+  padding: 1.8%;
+  border-radius: 3%;
+  border: none;
+}
+.card-title {
+  padding-left: 3%;
+}
+.title {
+  font-weight: 500;
+}
+.image {
+  background-image: url("../../../assets/img4.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+button {
+  width: 35%;
+}
+button:disabled {
+  color: grey;
+}
+.secondary-btn {
+  padding: 2.9% 0;
+  margin-left: 1%;
+}
+.primary-btn {
+  width: fit-content;
+  padding-left: 19%;
+  background-color: white;
+  margin-bottom: 8.1%;
+}
+.form-check-input {
+  padding: 0.75em 1.4em;
+  margin-bottom: -5%;
+  cursor: pointer;
+  background-color: rgb(256, 172, 28);
+  border: none;
+  transform: rotate(180deg);
+}
+.float-right {
+  margin-left: 60%;
+}
+.circle-buttons {
+  margin-left: -3%;
+}
+.round {
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 6% 10.5%;
+  width: fit-content;
+}
+.bg-light {
+  opacity: 0.5;
+}
+.background-violet {
+  border: none;
+}
+.input-array {
+  height: 30vh;
+}
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+  width: 95%;
+}
+input:focus {
+  outline: none;
+}
+.dot {
+  height: 7%;
+  width: 0.8vw;
+  border-radius: 50%;
+}
+.dot-small {
+  background-color: #bbb;
+  height: 4%;
+  width: 0.5vw;
+}
+i {
+  font-size: large;
+}
+.plus {
+  cursor: pointer;
+  margin-left: -10%;
+  color: blueviolet;
+}
+label {
+  margin-top: 10%;
+}
+.last-inpt {
+  outline: none;
+  border: none;
+  width: 50%;
+}
+.last-inpt::-webkit-inner-spin-button,
+.last-inpt::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.lst-label {
+  margin-top: 0;
+}
+.symbol {
+  margin-left: -2%;
+}
+
+@media only screen and (max-width: 920px) {
+  .card {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .title {
+    font-size: 6vw;
+  }
+  .text-small {
+    font-size: larger;
+  }
+  .dot {
+    height: 1.8vh;
+    width: 3vw;
+    border-radius: 50%;
+  }
+  .dot-small {
+    background-color: #bbb;
+    height: 1vh;
+    width: 2vw;
+  }
+  i {
+    font-size: small;
+  }
+  .image {
+    background-size: 100% 30%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .card {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .text-small {
+    font-size: small;
+  }
+  .title {
+    font-size: 8vw;
+  }
+}

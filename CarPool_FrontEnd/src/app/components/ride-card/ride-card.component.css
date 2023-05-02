@@ -1,0 +1,63 @@
+.rounded-circle {
+  height: 2.4em;
+  width: 2.2em;
+}
+.card {
+  border: 1px solid #ebebeb;
+  border-radius: 3.5%;
+}
+.card-header {
+  background: none;
+  border: none;
+  padding: 4% 8% 0% 4%;
+}
+.card-body {
+  padding: 0;
+  margin-left: 4%;
+  margin-right: 18%;
+}
+.dot {
+  color: #bbb;
+  font-size: xx-small;
+}
+.dot-primary {
+  font-size: small;
+}
+i {
+  font-size: large;
+}
+.text-md {
+  font-size: 90%;
+  font-weight: 400;
+}
+.card-texts {
+  font-size: medium;
+}
+.hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 920px) {
+  .title {
+    font-size: 6vw;
+  }
+  .form-check-input {
+    padding-right: 15vw;
+    width: 5vw;
+  }
+  .text-small {
+    font-size: larger;
+  }
+  .dot {
+    height: 1.5vh;
+    width: 2.5vw;
+  }
+
+  .dot-primary {
+    height: 2vh;
+    width: 3vw;
+  }
+  i {
+    font-size: medium;
+  }
+}

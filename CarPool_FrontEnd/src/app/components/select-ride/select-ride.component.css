@@ -1,0 +1,46 @@
+.nav-bar {
+  height: 15%;
+}
+.bolder-text {
+  font-weight: 800;
+}
+.image {
+  background-image: url("../../../assets/img3.png");
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 10%;
+}
+.content {
+  padding-top: 2%;
+  padding-left: 29%;
+  padding-right: 20%;
+  box-sizing: border-box;
+}
+.cards {
+  margin-top: 2%;
+}
+.card-1 {
+  border: 1% solid white;
+  padding: 10%;
+  border-radius: 5%;
+  margin-bottom: 4%;
+  margin-right: 3%;
+}
+
+@media only screen and (max-width: 900px) {
+  .card-1 {
+    padding-top: 15%;
+    padding-bottom: 15%;
+  }
+  .primary-btn {
+    margin-bottom: 10%;
+  }
+  .content {
+    margin-top: 10%;
+  }
+  .image {
+    background-image: url("../../../assets/imgg2.png");
+    background-size: 100% 100%;
+  }
+}

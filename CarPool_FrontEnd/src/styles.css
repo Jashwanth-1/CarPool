@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.underline {
+  border-bottom: 2.5px solid white;
+  width: fit-content;
+  padding-bottom: 1%;
+}
+.btn,
+button,
+a {
+  cursor: pointer;
+  border: none;
+}
+button:hover {
+  transform: scale(1.04);
+}
+button:disabled {
+  transform: none;
+  cursor: no-drop;
+  background-color: grey;
+  color: #ffffff;
+}
+.background-violet {
+  background-color: rgb(148, 28, 256);
+  opacity: 1;
+  color: #ffffff;
+}
+.background-orange {
+  background-color: rgb(256, 172, 28);
+}
+
+.orange {
+  color: rgb(256, 172, 28);
+}
+.violet {
+  color: rgb(148, 28, 256);
+}
+.text-small {
+  font-size: 0.8vw;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.text-muted {
+  opacity: 0.8;
+}

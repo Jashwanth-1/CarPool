@@ -1,0 +1,128 @@
+<div *ngFor="let ride of rides; let i = index">
+  <div
+    class="card shadow lh-1"
+    (click)="showRide(i)"
+    [attr.data-bs-toggle]="router.url === '/book-ride' ? 'modal' : 'null'"
+    [ngClass]="router.url === '/book-ride' ? 'hover' : ''"
+    data-bs-target="#staticBackdrop"
+  >
+    <div class="card-header d-flex justify-content-between">
+      <p class="fs-4 fw-bold">{{ ride.rideUserName }}</p>
+      <img src="../../assets/emoji.jpg" alt="" class="rounded-circle" />
+    </div>
+    <div class="card-body fs-6 d-flex justify-content-between">
+      <div class="d-flex flex-column justify-content-between text-md">
+        <div class="d-flex flex-column">
+          <p class="text-muted text-small fw-bold">From</p>
+          <p class="pd-2 card-texts">{{ ride.fromLocation }}</p>
+        </div>
+        <div class="d-flex flex-column">
+          <p class="text-muted text-small fw-bold">Date</p>
+          <p class="card-texts">{{ ride.date }}</p>
+        </div>
+        <div class="d-flex flex-column">
+          <p class="text-muted text-small fw-bold">Price</p>
+          <p class="card-texts">{{ ride.price + "$" }}</p>
+        </div>
+      </div>
+      <div class="d-flex align-self-start mt-3">
+        <i
+          class="fa-sharp fa-solid violet fa-circle align-self-center dot-primary mt-1"
+        ></i>
+        <i
+          class="fa-sharp fa-solid fa-circle align-self-center dot m-1 mt-lg-1 mt-2"
+        ></i>
+        <i
+          class="fa-sharp fa-solid fa-circle align-self-center dot m-1 mt-lg-1 mt-2"
+        ></i>
+        <i
+          class="fa-sharp fa-solid fa-circle align-self-center dot m-1 mt-lg-1 mt-2"
+        ></i>
+        <i
+          class="fa-sharp fa-solid fa-circle align-self-center dot m-1 mt-lg-1 mt-2"
+        ></i>
+        <i
+          class="fa fa-map-marker align-self-center violet m-2"
+          aria-hidden="true"
+        ></i>
+      </div>
+      <div class="d-flex flex-column justify-content-between end text-md">
+        <div class="d-flex flex-column">
+          <p class="text-muted text-small fw-bold">To</p>
+          <p class="card-texts">{{ ride.toLocation }}</p>
+        </div>
+        <div class="d-flex flex-column">
+          <p class="text-muted text-small fw-bold">Time</p>
+          <p class="card-texts">{{ ride.rideTime }}</p>
+        </div>
+        <div class="d-flex flex-column">
+          <div *ngIf="router.url === '/book-ride'">
+            <p class="text-muted text-small fw-bold">Seat Availability</p>
+            <p class="card-texts">{{ ride.availableSeats }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header fw-bold">
+        <h1 class="modal-title fw-bold fs-1" id="staticBackdropLabel">
+          Ride Details
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="d-flex justify-content-evenly p-2">
+        <div class="d-flex flex-column fs-3 text-muted fw-bold">
+          <p>From</p>
+          <p>To</p>
+          <p>Date</p>
+          <p>Time</p>
+          <p>Price</p>
+          <p>Seat Availability</p>
+        </div>
+        <div class="d-flex flex-column fs-3" *ngIf="selectedRide != null">
+          <p>{{ selectedRide.fromLocation }}</p>
+          <p>{{ selectedRide.toLocation }}</p>
+          <p>{{ selectedRide.date }}</p>
+          <p>{{ selectedRide.rideTime }}</p>
+          <p>{{ selectedRide.price + "$" }}</p>
+          <p>{{ selectedRide.availableSeats }}</p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn background-violet rounded-pill fs-3 text-light"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn background-orange rounded-pill fs-3 text-light"
+          data-bs-dismiss="modal"
+          (click)="bookRide(selectedRide)"
+        >
+          Book
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

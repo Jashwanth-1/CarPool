@@ -1,0 +1,71 @@
+<div class="h-100 m-0 d-flex flex-column image">
+  <app-navbar class="navh"></app-navbar>
+  <div class="title text-center fs-2 fw-bold">PROFILE</div>
+  <div class="d-flex flex-md-row flex-column justify-content-center fs-3">
+    <div class="d-flex flex-column primary">
+      <label for="FirstName">First Name</label>
+      <input
+        type="text"
+        [(ngModel)]="user.firstName"
+        #first
+        value="{{ user.firstName }}"
+        [disabled]="isEditClicked"
+        name="FirstName"
+      />
+      <label for="LastName">Last Name</label>
+      <input
+        type="text"
+        [(ngModel)]="user.lastName"
+        #last
+        value="{{ user.lastName }}"
+        [disabled]="isEditClicked"
+        name="LastName"
+      />
+      <label for="EmailId">Email</label>
+      <input
+        type="text"
+        [(ngModel)]="user.emailId"
+        #email
+        value="{{ user.emailId }}"
+        [disabled]="isEditClicked"
+        name="EmailId"
+      />
+    </div>
+    <div class="d-flex flex-column secondary">
+      <label for="MobileNumber">Mobile Number</label>
+      <input
+        type="text"
+        [(ngModel)]="user.mobileNumber"
+        #mobile
+        value="{{ user.mobileNumber }}"
+        [disabled]="isEditClicked"
+        name="MobileNumber"
+      />
+      <label for="Password">Password</label>
+      <input
+        [type]="isEditClicked ? 'password' : 'text'"
+        [(ngModel)]="user.password"
+        #password
+        value="{{ user.password }}"
+        [disabled]="isEditClicked"
+        name="Password"
+      />
+    </div>
+  </div>
+  <div class="text-center m-5">
+    <button
+      class="btn rounded-pill background-violet text-light fs-2 fs-md-4 m-3"
+      (click)="editProfile()"
+      [disabled]="!isEditClicked"
+    >
+      Edit
+    </button>
+    <button
+      class="btn rounded-pill background-violet text-light fs-md-4 fs-2"
+      (click)="saveProfile()"
+      [disabled]="isEditClicked"
+    >
+      Save
+    </button>
+  </div>
+</div>

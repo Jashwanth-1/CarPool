@@ -1,0 +1,20 @@
+<div class="d-flex flex-column h-100 bg-white image">
+  <app-navbar class="nav-bar"></app-navbar>
+  <div class="d-flex flex-column content">
+    <p class="fs-3 bolder-text">Hey {{ userName }}!</p>
+    <div class="d-flex flex-lg-row flex-column cards fs-3 text-light fw-bold">
+      <button
+        class="primary-btn card-1 fs-2 text-light fw-bold background-violet shadow"
+        (click)="openBookRidePage()"
+      >
+        Book a ride
+      </button>
+      <button
+        class="card-1 background-orange fs-2 text-light fw-bold shadow"
+        (click)="openOfferRidePage()"
+      >
+        Offer a ride
+      </button>
+    </div>
+  </div>
+</div>

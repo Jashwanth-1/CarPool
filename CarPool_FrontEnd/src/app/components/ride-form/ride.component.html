@@ -1,0 +1,62 @@
+<form
+  [formGroup]="rideForm"
+  class="d-flex flex-column justify-content-evenly text-small"
+>
+  <div class="row">
+    <div class="col-11 d-flex flex-column">
+      <label for="fromLocation" class="text-muted text-small fw-bold"
+        >From</label
+      >
+      <input
+        type="text"
+        placeholder="Enter from location"
+        id="fromLocation"
+        class="form-control text-small"
+        #from
+        formControlName="fromLocation"
+      />
+      <label for="toLocation" class="text-muted text-small fw-bold">To</label>
+      <input
+        type="text"
+        placeholder="Enter to location"
+        id="toLocation"
+        class="form-control text-small"
+        #to
+        formControlName="toLocation"
+      />
+    </div>
+    <div class="col-1 d-flex flex-column">
+      <span class="dot background-violet align-self-center m-2"></span>
+      <span class="dot dot-small align-self-center m-1"></span>
+      <span class="dot dot-small align-self-center m-1"></span>
+      <span class="dot dot-small align-self-center m-1"></span>
+      <span class="dot dot-small align-self-center m-1"></span>
+      <i
+        class="fa fa-map-marker align-self-center violet m-md-1 m-3"
+        aria-hidden="true"
+      ></i>
+    </div>
+  </div>
+
+  <label class="text-muted text-small fw-bold">Date</label>
+  <input
+    type="date"
+    placeholder="dd/mm/yyyy"
+    class="form-control text-small"
+    id="ternary-input"
+    #date
+    formControlName="date"
+    [min]="currentDate"
+  />
+  <label for="time" class="text-muted fw-bold text-smaller">Time</label>
+  <div class="row">
+    <button
+      *ngFor="let timeslot of timeSlots; let i = index"
+      [ngClass]="timeslotFlags[i] == true ? 'background-violet' : 'bg-light'"
+      class="rounded-pill col-3 text-smaller"
+      (click)="time(i)"
+    >
+      {{ timeslot }}
+    </button>
+  </div>
+</form>

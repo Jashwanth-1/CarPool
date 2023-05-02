@@ -1,0 +1,57 @@
+<div class="d-flex justify-content-between nav">
+  <img src="assets\logo (1).png" class="logo float-left" />
+  <div>
+    <div class="profile d-flex">
+      <div ngbDropdown class="dropdown">
+        <p
+          ngbDropdownToggle
+          class="fs-4 fw-bold"
+          type="button"
+          id="dropdownMenuButton1"
+          aria-expanded="false"
+        >
+          {{ userName }}
+        </p>
+        <ul
+          ngbDropdownMenu
+          aria-labelledby="dropdownMenuButton1"
+          class="m-1 justify-content-center shadow"
+        >
+          <li>
+            <a
+              class="drop-item text-muted"
+              ngbDropdownItem
+              (click)="openProfilePage()"
+              >Profile</a
+            >
+          </li>
+          <li>
+            <a
+              class="drop-item text-muted"
+              ngbDropdownItem
+              (click)="openHomePage()"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="drop-item text-muted"
+              ngbDropdownItem
+              (click)="openMyRidesPage()"
+              >My Rides</a
+            >
+          </li>
+          <li>
+            <a
+              class="drop-item text-muted"
+              ngbDropdownItem
+              (click)="openLoginPage()"
+              >Logout</a
+            >
+          </li>
+        </ul>
+      </div>
+      <img src="../../assets/emoji.jpg" alt="" class="rounded-circle" />
+    </div>
+  </div>
+</div>
